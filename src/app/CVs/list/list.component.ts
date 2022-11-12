@@ -13,12 +13,10 @@ export class ListComponent implements OnInit {
 
   showCV(selected: any){
     this.selectedCV.emit(selected);
-
   }
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

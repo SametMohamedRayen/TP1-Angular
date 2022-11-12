@@ -1,0 +1,14 @@
+<ul class="list-group" *ngIf="listEmbauche">
+  <li *ngFor="let cv of listEmbauche" class="list-group-item">
+    <div class="d-flex align-items-center"
+    >
+      <div class="flex-shrink-0">
+        <img src="assets/images/{{cv.path|defaultImagePipe}}" alt="a profile pic" height="75px">
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <h3>{{cv.name}} {{cv.firstname}}</h3>
+        <p>{{cv.job}}</p>
+      </div>
+    </div>
+  </li>
+</ul>

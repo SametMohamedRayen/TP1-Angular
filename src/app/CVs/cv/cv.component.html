@@ -4,7 +4,7 @@
       <app-list (selectedCV)="selectCV($event)" [cvs] = "cvs"></app-list>
     </div>
     <div class="col">
-      <app-detail [cv]="selectedCV"></app-detail>
+      <app-detail [cv]="selectedCV" *ngIf="selectedCV"></app-detail>
     </div>
   </div>
 </div>

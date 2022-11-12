@@ -2,7 +2,7 @@
 (click)="showCV()"
 >
   <div class="flex-shrink-0">
-    <img src="../../../assets/images/{{cv.path}}" alt="a profile pic" height="75px">
+    <img src="../../../assets/images/{{cv.path|defaultImagePipe}}" alt="a profile pic" height="75px">
   </div>
   <div class="flex-grow-1 ms-3">
     <h3>{{cv.name}} {{cv.firstname}}</h3>

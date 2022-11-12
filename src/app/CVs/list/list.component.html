@@ -1,8 +1,5 @@
 <ul class="list-group">
-  <li class="list-group-item">
-    <app-item (selectedCV)="showCV($event)" [cv]="cvs[0]"></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item (selectedCV)="showCV($event)" [cv]="cvs[1]"></app-item>
+  <li *ngFor="let cv of cvs" class="list-group-item">
+    <app-item (selectedCV)="showCV($event)" [cv]="cv"></app-item>
   </li>
 </ul>
