@@ -24,4 +24,24 @@ export class CvServiceService {
   GetAll(){
     return this.cvs;
   }
+
+  getCvByID(id: number): CV|undefined {
+    const cv = this.cvs.find(cv=>{
+      return cv.id==id;
+    });
+    return cv;
+  }
+
+  deleteCv(cv:CV):void {
+    const index = this.cvs.indexOf(cv, 0);
+    if (index > -1) {
+      this.cvs.splice(index, 1);
+    }
+  }
+
+  addCv(cv:CV):void{
+
+    cv.id=this.cvs.length+1 ;
+    this.cvs.push(cv);
+  }
 }

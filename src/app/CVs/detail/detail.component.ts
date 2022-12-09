@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CV } from '../Model/CV';
 import {EmbaucheServiceService} from "../../services/embauche-service.service";
 import {ListEmbaucheComponent} from "../../components/list-embauche/list-embauche.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -11,7 +12,7 @@ import {ListEmbaucheComponent} from "../../components/list-embauche/list-embauch
 export class DetailComponent implements OnInit {
   @Input() cv!: CV;
 
-  constructor(private embaucheService:EmbaucheServiceService) { }
+  constructor(private embaucheService:EmbaucheServiceService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +20,8 @@ export class DetailComponent implements OnInit {
   addEmbauche() {
     this.embaucheService.Embaucher(this.cv);
     console.log(this.embaucheService.GetAll())
+  }
+  details():void{
+    this.router.navigate(["CV/"+this.cv?.id]);
   }
 }

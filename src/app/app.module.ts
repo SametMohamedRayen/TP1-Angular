@@ -18,6 +18,13 @@ import { ListEmbaucheComponent } from './components/list-embauche/list-embauche.
 import {CvServiceService} from "./services/cv-service.service";
 import {EmbaucheServiceService} from "./services/embauche-service.service";
 import {ToastrModule} from "ngx-toastr";
+import { HeaderComponent } from './CVs/header/header.component';
+import { SecondComponent } from './components/second/second.component';
+import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
+import { UserDetailComponent } from './CVs/user-detail/user-detail.component';
+import { AuthComponent } from './CVs/auth/auth.component';
+import { AddCvComponent } from './CVs/add-cv/add-cv.component';
+import { ImageLoopComponent } from './components/image-loop/image-loop.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +40,13 @@ import {ToastrModule} from "ngx-toastr";
     DefaultCvHiddenDirective,
     DefaultImagePipePipe,
     ListEmbaucheComponent,
+    HeaderComponent,
+    SecondComponent,
+    RouterSimulatorComponent,
+    UserDetailComponent,
+    AuthComponent,
+    AddCvComponent,
+    ImageLoopComponent,
   ],
   imports: [
     FormsModule,

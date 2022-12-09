@@ -11,5 +11,4 @@ export class DefaultImagePipePipe implements PipeTransform {
     }
     return path;
   }
-
 }

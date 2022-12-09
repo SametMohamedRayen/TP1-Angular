@@ -32,5 +32,7 @@ export class CvComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cvs = this.cvService.GetAll();
+  }
 }

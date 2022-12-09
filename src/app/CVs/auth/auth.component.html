@@ -1,0 +1,9 @@
+<form #auth="ngForm" >
+  <label  for="email"  >email</label>
+  <input #mail="ngModel" id="email" email type="text" ngModel name="email" required >
+  <div class="alert alert-danger" *ngIf="mail.touched && mail.invalid"> Please enter a valid email</div>
+  <label for="password">password</label>
+  <input  id="password" type="password" ngModel name="password" required  minlength="4">
+
+  <button [disabled]="auth.invalid" (click)="envoyer(auth)" class="btn btn-success" style="background-color: #43cc29;color:aliceblue ;">envoyer</button>
+</form>

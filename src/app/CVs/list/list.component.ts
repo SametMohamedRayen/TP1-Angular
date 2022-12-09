@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CV } from '../Model/CV';
+import {CvServiceService} from "../../services/cv-service.service";
 
 @Component({
   selector: 'app-list',
@@ -15,8 +16,9 @@ export class ListComponent implements OnInit {
     this.selectedCV.emit(selected);
   }
 
-  constructor() { }
+  constructor(private cvService : CvServiceService) { }
 
   ngOnInit(): void {
+    this.cvs = this.cvService.GetAll()
   }
 }

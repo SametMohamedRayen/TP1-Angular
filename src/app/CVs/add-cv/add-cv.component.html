@@ -1,0 +1,11 @@
+<form #addform="ngForm">
+  <label for="firstName">First Name</label>
+  <input  ngModel type="text" required id="firstName" name="firstname" class="form-control">
+  <label for="name">Last Name</label>
+  <input  ngModel type="text" required id="name" name="name" class="form-control">
+  <label for="job">Job</label>
+  <input  ngModel type="text" required id="job" name="job" class="form-control">
+  <label for="url">Image url</label>
+  <input  ngModel type="text" id="url"  name="path" class="form-control">
+  <button [disabled]="addform.invalid" (click)="addCv(addform)" > add</button>
+</form>
